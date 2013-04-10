@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8" />
+<title>Exquisit Hover</title>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="js/exquisit.hover.js"></script>
+<script>
+    $(function(){
+        $('#hover-full').Exquisit({type: 'full'});
+        $('#hover-half').Exquisit({type: 'half'});
+        $('#hover-showFromBottom').Exquisit({type: 'showFromBottom'});
+    });
+</script>
+
+<style>
+    div {float: left; overflow: hidden;}
+    div.hover {float: none; background: red;}
+    #hover-full {
+        width: 300px;
+        height: 300px;
+        margin: 20px;
+        position: relative;
+        background: grey;
+    }
+    #hover-full .hover {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+    }
+    #hover-half {
+        width: 300px;
+        height: 300px;
+        margin: 20px;
+        position: relative;
+        background: grey;
+    }
+    #hover-half .hover {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+    }
+    #hover-showFromBottom {
+        width: 300px;
+        height: 300px;
+        margin: 20px;
+        position: relative;
+        background: grey;
+    }
+    #hover-showFromBottom .hover {
+        position: absolute;
+        width: 100%;
+        height: 60px;
+        font-size: 22px;
+        text-align: center;
+        color: #fff;
+        bottom: -30px;
+        left: 0;
+    }
+</style>
+
+</head>
+<body>
+
+    <div id="hover-full">
+        <div class="hover"></div>
+    </div>
+
+    <div id="hover-half">
+        <div class="hover"></div>
+    </div>
+
+    <div id="hover-showFromBottom">
+        <div class="hover">Some text which <br />is half visible</div>
+    </div>
+
+</body>
+</html>
